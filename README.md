@@ -11,17 +11,17 @@ Follow the below steps:
 
 ## 0- Generate a nm style debug info file
 
-Use my tools from:
+just use nm on debug kernel image, example for Debian:
+
+https://github.com/therealdreg/linux_kernel_debug_disassemble_ida_vmware#debian-kernel-with-debug-info
+
+Or you can use other kind of tools, Look my repo:
 
 https://github.com/therealdreg/linux_kernel_debug_disassemble_ida_vmware
 
 * **dump_kallsyms.sh**: dump symbols from /proc/kallsyms 
 * **vmlinuxsystemap.sh**: copy current kernel vmlinuz & system.map to current directory
 * **lkmsym/dumpsyms.sh**: load pattern-finder-ring0-LKM and dump kernel symbols
-
-Or just use nm on debug kernel image, example for Debian:
-
-https://github.com/therealdreg/linux_kernel_debug_disassemble_ida_vmware#debian-kernel-with-debug-info
 
 ## 1- nm style output file to Bochs syms
 

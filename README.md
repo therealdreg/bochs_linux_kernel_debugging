@@ -141,6 +141,8 @@ Done! try if symbols works executing some commands on Bochs debugger:
 * u /10
 * ...
 
+![linux_idt_disas_syscall](img/linux_idt_disas_syscall.png)
+
 ## How to use Bochs symbol file on IDA PRO Local Bochs Debugger
 
 Edit "C:\Program Files\IDA Pro 7.7\cfg\dbg_bochs.cfg"

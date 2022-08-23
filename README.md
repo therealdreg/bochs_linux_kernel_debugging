@@ -11,7 +11,7 @@ Follow the below steps:
 
 ## 0- Generate a nm style debug info file
 
-just use nm on debug kernel image, example for Debian:
+just use **nm** command on debug kernel image, example for Debian:
 
 https://github.com/therealdreg/linux_kernel_debug_disassemble_ida_vmware#debian-kernel-with-debug-info
 

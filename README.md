@@ -13,9 +13,30 @@ Follow the below steps:
 
 just use **nm** command on debug kernel image, example for Debian:
 
-https://github.com/therealdreg/linux_kernel_debug_disassemble_ida_vmware#debian-kernel-with-debug-info
+1- Install dbg image
+```
+root@debian# apt-get install linux-image-$(uname -r)-dbg
+```
 
-Or you can use other kind of tools, Look my repo:
+2- Check if nm works on dbg image:
+```
+dreg@debian# nm /usr/lib/debug/boot/vmlinux-$(uname -r) | tail
+ffffffff8207d7c0 d zswap_same_filled_pages_enabled
+ffffffff8262b54c b zswap_stored_pages
+ffffffff8262b420 b zswap_trees
+ffffffff81225df0 t zswap_update_total_size
+ffffffff81226a50 t zswap_writeback_entry
+ffffffff8262b538 b zswap_written_back_pages
+ffffffff81c41fb8 r zswap_zpool_ops
+ffffffff8207d7e0 d zswap_zpool_param_ops
+```
+
+3- Generate a valid output file for linsymtobch.py:
+```
+dreg@debian# nm /usr/lib/debug/boot/vmlinux-$(uname -r) > nm_output.txt
+```
+
+Also you can use/combine other kind of tools, Look this repo for more hints:
 
 https://github.com/therealdreg/linux_kernel_debug_disassemble_ida_vmware
 

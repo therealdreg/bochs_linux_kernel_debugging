@@ -136,10 +136,12 @@ Load generated file on Bochs debugger with "ldsym global", example:
 ldsym global "C:\Users\leno\Desktop\bochs_linux_kernel_debugging\output_bochs_syms.txt"
 ```
 
-Done! try: "info idt" "u /10" ...
+Done! try if symbols works executing some commands on Bochs debugger:
+* info idt
+* u /10
+* ...
 
-
-## How to use Bochs symbol file on IDA PRO
+## How to use Bochs symbol file on IDA PRO Local Bochs Debugger
 
 Edit "C:\Program Files\IDA Pro 7.7\cfg\dbg_bochs.cfg"
 
@@ -160,19 +162,19 @@ C:\Users\leno\Desktop\Bochs-pruebas\bochs\.bochsrc
 
 Cick Debug Options -> Set specific options -> Select Disk image 
 
-Download this repo:
+Download ida_load_names.py from this repo:
 
 https://github.com/therealdreg/symseghelper
 
-in Host: Open IDA PRO, start a Bochs debug session and go to File -> Script File
+Open IDA PRO, start a Bochs debug session and go to File -> Script File
 
 Select ida_load_names.py, this script ask you for generated Bochs symbol file
 
 Done!
 
-After that you can load symbols on Native Bochs Debugger (running inside IDA PRO) using "ldsym global"
+After that you can also load symbols on Native Bochs Debugger (it is running inside IDA PRO). Just select Bochs in IDA command line and execute a "ldsym global"
 
-So, IDA PRO with Bochs symbols (ida_load_names.py) + Bochs native debugger with symbols (ldsym global), The best of both worlds:
+IDA PRO with Bochs symbols (ida_load_names.py) + Bochs native debugger with symbols (ldsym global), The best of both worlds:
 
 ![bochs_ida_pro_linux_kernel_debug_and_native](img/bochs_ida_pro_linux_kernel_debug_and_native.png)
 

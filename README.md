@@ -180,6 +180,8 @@ IDA PRO with Bochs symbols (ida_load_names.py) + Bochs native debugger with symb
 
 ![bochs_ida_pro_linux_kernel_debug_and_native](img/bochs_ida_pro_linux_kernel_debug_and_native.png)
 
+WARNING: your own Bochs Instrumentation can cause problems on IDA PRO Local Bochs 
+
 # Related 
 
 Helper scripts for windows debugging with symbols for Bochs and IDA Pro (PDB files). Very handy for user mode <--> kernel mode:
